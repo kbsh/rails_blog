@@ -1,0 +1,11 @@
+/usr/bin/ruby2.2 -r ./siteconf20151110-13073-fkyj38.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20151110-13073-1b82q52
