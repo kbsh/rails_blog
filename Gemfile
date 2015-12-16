@@ -51,3 +51,6 @@ gem 'twitter-bootswatch-rails-helpers'
 gem 'execjs'
 gem 'less-rails'
 gem 'therubyracer'
+
+# markdown
+gem "redcarpet"

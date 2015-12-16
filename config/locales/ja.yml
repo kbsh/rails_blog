@@ -19,5 +19,30 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+ja:
   hello: "Hello world"
+  title: "WEAL | web engineer action log"
+  title-short: "WEAL"
+  helpers:
+    links:
+      destroy: '削除'
+      edit:    '編集'
+      new:     '登録'
+      cancel:  'キャンセル'
+      back:    '戻る'
+      confirm: '削除してよろしいですか'
+      add:     '追加'
+      close:   '閉じる'
+  activerecord:
+    models:
+      content: '記事'
+      tag:     'タグ'
+    attributes:
+      content:
+        filename: 'ファイル名'
+        title: 'タイトル'
+        tags: 'タグ'
+      content_tag:
+        filename: 'ファイル名'
+        tag: 'タグ'
+

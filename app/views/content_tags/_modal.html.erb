@@ -1,0 +1,33 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <%= form_for( ContentTag.new ) do |f| %>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title"><%=t '.title', :default => [:'helpers.titles.new', '%{model} の追加'], :model => Tag.model_name.human.titleize %></h4>
+      </div>
+      <div class="modal-body">
+        <div class="control-group">
+          <%= f.label :filename, :class => 'control-label' %>
+          <div class="controls">
+            <%= @content.filename %>
+          </div>
+      </div>
+        <div class="control-group" style="padding-bottom:20px;">
+          <div class="controls">
+            <%= f.hidden_field :content_id, :class => 'hidden_field', :value => @content.id %>
+          </div>
+        </div> 
+        <div class="control-group">
+          <%= f.label :tag, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.collection_select :tag_id, Tag.all, :id, :name, :class => 'collection_select' %>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><%= t 'helpers.links.close' %></button>
+        <%= f.submit t('.'+controller.action_name, :default => t("helpers.links."+controller.action_name) ), :class => "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

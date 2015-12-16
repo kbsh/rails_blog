@@ -1,0 +1,21 @@
+<%= form_for @content, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :filename, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :filename, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :title, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :title, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <br>
+
+  <%= f.submit t('.'+controller.action_name, :default => t("helpers.links."+controller.action_name) ), :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            contents_path, :class => 'btn btn-default' %>
+
+<% end %>

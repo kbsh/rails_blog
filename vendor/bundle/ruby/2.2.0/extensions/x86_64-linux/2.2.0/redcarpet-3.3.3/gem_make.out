@@ -1,0 +1,34 @@
+/usr/bin/ruby2.2 -r ./siteconf20151209-24154-17yqd3z.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling rc_render.c
+compiling html_smartypants.c
+compiling buffer.c
+buffer.c: In function ‘bufcstr’:
+buffer.c:110:2: warning: passing argument 1 of ‘bufgrow’ discards ‘const’ qualifier from pointer target type [enabled by default]
+  if (buf->size + 1 <= buf->asize || bufgrow(buf, buf->size + 1) == BUF_OK) {
+  ^
+buffer.c:59:1: note: expected ‘struct buf *’ but argument is of type ‘const struct buf *’
+ bufgrow(struct buf *buf, size_t neosz)
+ ^
+compiling html.c
+compiling rc_markdown.c
+compiling stack.c
+compiling autolink.c
+compiling houdini_href_e.c
+compiling markdown.c
+markdown.c: In function ‘sd_markdown_render’:
+markdown.c:2838:3: warning: passing argument 1 of ‘is_codefence’ discards ‘const’ qualifier from pointer target type [enabled by default]
+   if (codefences_enabled && (is_codefence(document + beg, doc_size - beg, NULL) != 0))
+   ^
+markdown.c:1391:1: note: expected ‘uint8_t *’ but argument is of type ‘const uint8_t *’
+ is_codefence(uint8_t *data, size_t size, struct buf *syntax)
+ ^
+compiling houdini_html_e.c
+linking shared-object redcarpet.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 redcarpet.so ./.gem.20151209-24154-t4zgyk

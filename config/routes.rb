@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'tags/search'
+
+  root "post#list"
+  get 'post/list_by_tag'
+  get 'post/search'
+
+  resources :contents
+  resources :content_tags
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

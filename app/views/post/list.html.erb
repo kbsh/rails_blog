@@ -1,0 +1,5 @@
+<div class="list-group">
+  <% @contents.each do | content | %>
+    <%= render( partial: "list_group_item", locals: { content: content, is_excerpt: true } ) %>
+  <% end %>
+</div>

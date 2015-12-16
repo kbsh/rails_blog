@@ -1,0 +1,14 @@
+<div class="list-group-item">
+  <!-- date -->
+  <%= date_icon( content.created_at ) %>
+  <!-- title -->
+  <h3><%= link_to( content.title, post_search_path( i:content.id ) ) %></h3>
+  <!-- tag -->
+  <%= post_tags( content ) %>
+  <!-- excerpt -->
+  <% if( defined?( is_excerpt ) && is_excerpt ) %>
+    <div class="excerpt_area">
+      <%= post_excerpt( content ) %>
+    </div>
+  <% end %>
+</div>
