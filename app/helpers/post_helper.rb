@@ -6,8 +6,7 @@ module PostHelper
   def post_tags( content )
     html = "<div class='tag_area'>"
 
-    content.content_tags.each do | content_tag |
-      tag = content_tag.tag
+    content.tags.each do | tag |
       html += link_to(
         tag.name,
         # TODO タグのパスを改める

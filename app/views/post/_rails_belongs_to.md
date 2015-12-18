@@ -23,6 +23,8 @@ viewからのアクセスも割と自由。
 
 
 
+#### 1対多の場合
+
 bookに対し、複数のorderがある場合。
 
 | books | 説明 |
@@ -48,7 +50,6 @@ $ vi app/models/book.rb
 `dependent: :destroy`によって、bookのレコードを削除した時、関連するorderレコードを削除する<br>
 `foreign_key: :***`によって、idキーがordersテーブルのどのカラムと紐づくかを指定している。
 
-※ 1対1の場合は`has_one :order`とする。
 
 ```
 $ vi app/models/order.rb
@@ -92,6 +93,61 @@ orders.each do | order |
 end
 ```
 
+### 多対多の場合
+
+| tags | 説明 |
+| --- | --- |
+| id | - |
+
+| content_tags | 説明 |
+| --- | --- |
+| id | - |
+| tag_id | - |
+| content_id | - |
+| tag_id | content_tag : tag = n : 1 |
+| content_id | content_tag : content = n : 1 |
+
+| contents | 説明 |
+| --- | --- |
+| id | - |
+
+tagからcontentsを取得したい（逆でもよい）がtagsテーブルにcontent_idのように紐づくものがないので<br>
+content_tagsテーブルをかまさなければいけない場合
+
+###### 設定
+
+```
+$ vi app models/tags.rb
+
++   has_many :content_tags, foreign_key: :tag_id
++   has_many :contents, through: :content_tags
+```
+
+```
+$ vi app models/content_tags.rb
+
++   belongs_to :content, foreign_key: content_id
++   belongs_to :tag, foreign_key: tag_id
+```
+
+```
+$ vi app models/contents.rb
+
++   has_many :content_tags, foreign_key: :content_id
++   has_many :tags, through: :content_tags
+```
+
+
+###### 使い方
+
+```
+tag = Tag.find( 1 )
+
+contents = Tag.find( 1 ).contents
+```
+
+発行されたSQLがこちら
+`SELECT "contents".* FROM "contents" INNER JOIN "content_tags" ON "contents"."id" = "content_tags"."content_id" WHERE "content_tags"."tag_id" = ?  [["tag_id", 4]]`
 
 ***********
 
