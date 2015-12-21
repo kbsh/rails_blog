@@ -3,3 +3,5 @@
     <%= render( partial: "list_group_item", locals: { content: content, is_excerpt: true } ) %>
   <% end %>
 </div>
+
+<%= pagination( @page, @step, @count, @tag_id.nil? ? 0 : @tag_id ) %>
