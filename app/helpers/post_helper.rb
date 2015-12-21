@@ -41,4 +41,40 @@ module PostHelper
     html.html_safe
   end
 
+  # ページネーションを出力
+  # @param [integer] page 現在ページ数
+  # @param [integer] step 各ページ表示数
+  # @param [integer] count 件数
+  # @param [integer] tag_id タグID
+  # @return [string] DOM
+  def pagination( page, step, count, tag_id )
+    html = "<div class='text-center'>"
+    html += "<ul class='pagination pagination-lg'>"
+
+    if( tag_id )
+      html += "<li class='#{ page == 1 ? 'disabled' : '' }'>#{ link_to '&laquo;'.html_safe, post_list_by_tag_path( p:1, t:tag_id ) }</li>"
+    else
+      html += "<li class='#{ page == 1 ? 'disabled' : '' }'>#{ link_to '&laquo;'.html_safe, root_path( p:1 ) }</li>"
+    end
+
+    for i in 1..( count.to_f / step ).ceil do
+      if( tag_id )
+        html += "<li class='#{ page == i ? 'active' : '' }'>#{ link_to i, post_list_by_tag_path( p:i, t:tag_id ) }</li>"
+      else
+        html += "<li class='#{ page == i ? 'active' : '' }'>#{ link_to i, root_path( p:i ) }</li>"
+      end
+    end
+
+    if( tag_id )
+      html += "<li class='#{ page == i ? 'disabled' : '' }'>#{ link_to '&raquo;'.html_safe, post_list_by_tag_path( p:1, t:tag_id ) }</li>"
+    else
+      html += "<li class='#{ page == i ? 'disabled' : '' }'>#{ link_to '&raquo;'.html_safe, root_path( p:1 ) }</li>"
+    end
+
+    html += "</ul>"
+    html += "</div>"
+
+    html.html_safe
+  end
+
 end
