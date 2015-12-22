@@ -23,12 +23,14 @@ module ApplicationHelper
   # @return [string] html
   #
   def date_icon( datetime )
+
     html = "<div class='date_area label-info'>"
     html += "<span class='year'>#{ datetime.to_s( :year )}</span>"
     html += "<span class='day'>#{ datetime.to_s( :date ) }</span>"
     html += "</div>"
 
     html.html_safe
+
   end
   
 end
