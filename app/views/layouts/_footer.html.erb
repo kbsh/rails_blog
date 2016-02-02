@@ -1,0 +1,36 @@
+<footer>
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-xs-3 footer-category">
+        <h4 class="title">カテゴリ</h4>
+        <ul class="list-group">
+          <% @recommend_tags.each do | tag | %>
+            <%= link_to( post_list_by_tag_path( i: tag.id ) ) do %>
+              <li class="list-group-item">
+                <%= tag.name %>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+
+      <%= render "layouts/content", :contents => @liked_contents, :title => '人気記事' %>
+
+      <%= render "layouts/content", :contents => @latest_contents, :title => '新着記事' %>
+
+    </div>
+
+    <%# facebook Page %>
+    <div class="fb-page" data-href="https://www.facebook.com/webengineeractionlog" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/webengineeractionlog"><a href="https://www.facebook.com/webengineeractionlog">Web engineer action log</a></blockquote></div></div>
+
+    <hr>
+
+    <%# SNS %>
+    <%= render "layouts/sns" %>
+
+    <%# Copyright %>
+    <small>&copy; 2015 shohei kitabatake some rights reserved.</small>
+  </div>
+</footer>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151209084530) do
+ActiveRecord::Schema.define(version: 20151222024525) do
 
   create_table "content_tags", force: :cascade do |t|
     t.integer  "content_id", null: false
@@ -33,8 +33,12 @@ ActiveRecord::Schema.define(version: 20151209084530) do
 
   create_table "tags", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "display",    limit: 1, default: 0
+    t.integer  "count",                default: 0
   end
+
+  add_index "tags", ["display"], name: "index_tags_on_display"
 
 end

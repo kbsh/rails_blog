@@ -4,6 +4,7 @@ module PostHelper
   # @param [activerecord] content Contentモデル
   # @return [string] タグボタン
   def post_tags( content )
+
     html = "<div class='tag_area'>"
 
     content.tags.each do | tag |
@@ -18,12 +19,14 @@ module PostHelper
     html += "</div>"
     html += "<div class='clearfix'></div>"
     html.html_safe
+
   end
 
   # 記事本文の省略表示用文字列を取得する
   # @param [activerecord] content Contentモデル
   # @return [string] 本文の省略文字列
   def post_excerpt( content )
+
     # 記事取得
     article = render( :partial => content.filename )
     # htmlタグを削除
@@ -39,6 +42,7 @@ module PostHelper
     html += "</small>"
 
     html.html_safe
+
   end
 
   # ページネーションを出力
@@ -48,27 +52,37 @@ module PostHelper
   # @param [integer] tag_id タグID
   # @return [string] DOM
   def pagination( page, step, count, tag_id )
+
+    # 総ページ数
+    page_count = ( count.to_f / step ).ceil
+
+    # 1ページのみの場合は返却
+    return if( page_count == 1 )
+
     html = "<div class='text-center'>"
     html += "<ul class='pagination pagination-lg'>"
 
-    if( tag_id )
-      html += "<li class='#{ page == 1 ? 'disabled' : '' }'>#{ link_to '&laquo;'.html_safe, post_list_by_tag_path( p:1, t:tag_id ) }</li>"
-    else
+    # 先頭ページへのリンク
+    if( tag_id.nil? )
       html += "<li class='#{ page == 1 ? 'disabled' : '' }'>#{ link_to '&laquo;'.html_safe, root_path( p:1 ) }</li>"
+    else
+      html += "<li class='#{ page == 1 ? 'disabled' : '' }'>#{ link_to '&laquo;'.html_safe, post_list_by_tag_path( p:1, t:tag_id ) }</li>"
     end
 
-    for i in 1..( count.to_f / step ).ceil do
-      if( tag_id )
-        html += "<li class='#{ page == i ? 'active' : '' }'>#{ link_to i, post_list_by_tag_path( p:i, t:tag_id ) }</li>"
-      else
+    # 1 ~ 最終ページへのリンク
+    for i in 1..page_count do
+      if( tag_id.nil? )
         html += "<li class='#{ page == i ? 'active' : '' }'>#{ link_to i, root_path( p:i ) }</li>"
+      else
+        html += "<li class='#{ page == i ? 'active' : '' }'>#{ link_to i, post_list_by_tag_path( p:i, t:tag_id ) }</li>"
       end
     end
 
-    if( tag_id )
-      html += "<li class='#{ page == i ? 'disabled' : '' }'>#{ link_to '&raquo;'.html_safe, post_list_by_tag_path( p:1, t:tag_id ) }</li>"
-    else
+    # 最終ページへのリンク
+    if( tag_id.nil? )
       html += "<li class='#{ page == i ? 'disabled' : '' }'>#{ link_to '&raquo;'.html_safe, root_path( p:1 ) }</li>"
+    else
+      html += "<li class='#{ page == i ? 'disabled' : '' }'>#{ link_to '&raquo;'.html_safe, post_list_by_tag_path( p:1, t:tag_id ) }</li>"
     end
 
     html += "</ul>"
