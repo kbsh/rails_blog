@@ -15,5 +15,5 @@
 //= require flatly/loader
 //= require flatly/bootswatch
 //= require turbolinks
-//= require facebook
-
+//= require common
+//= require sns

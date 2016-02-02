@@ -1,3 +1,9 @@
+<% #main content  %>
 <%= render( partial: "list_group_item", locals: { content: @content, is_excerpt: false } ) %>
-
 <%= markdown render @content.filename %>
+
+<% #share  %>
+<% # render( "layouts/share" ) %>
+
+<% #facebook comment  %>
+<div class="fb-comments" data-href="http://sk-create.biz/search/i=<%= @content.id %>" data-numposts="5"></div>

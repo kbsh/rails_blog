@@ -1,3 +1,5 @@
+documentReady( function(){
+
 window.fbAsyncInit = function() {
     FB.init({
         appId      : '858240187558951',
@@ -62,3 +64,4 @@ FB.Event.subscribe( 'edge.create',
 // $( ".fb-like" ).attr( "data-href", url );// いいね
 // $( ".fb-comments" ).attr( "data-href", url );// コメント
 
+});

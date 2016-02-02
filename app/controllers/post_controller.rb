@@ -12,11 +12,17 @@ class PostController < ApplicationController
   def list_by_tag
     tag_id = params['i'] ? params['i'].to_i : 1
 
-    @count = Tag.find( tag_id ).contents.count
-    @contents = Tag.find( tag_id ).contents
+    tag = Tag.find( tag_id )
+
+    @count = tag.contents.count
+    @contents = tag.contents
       .order( :created_at => :desc )
       .offset( @step * @page - @step - 1 )
       .limit( @step )
+
+    # 訪問数をインクリメント
+    tag.count.succ
+    tag.save
 
     render "list"
   end
@@ -24,6 +30,14 @@ class PostController < ApplicationController
   def search
     content_id = params['i'] ? params['i'].to_i : 1
     @content = Content.find( content_id )
+
+    # 訪問数をインクリメント
+    @content.count.succ
+    @content.save
+    @content.tags.each do | tag |
+      tag.count.succ
+      tag.save
+    end
   end
 
   def set_page
