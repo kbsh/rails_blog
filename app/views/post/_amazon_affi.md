@@ -9,7 +9,7 @@ categories = ["blog"]
 
 ### アフィリエイトといえば
 
-アフィリエイトの最王手といえば<a href="http://px.a8.net/svt/ejp?a8mat=2HQ32D+419SDU+0K+10H0IQ" target="_blank">`A8`</a>
+アフィリエイトの最王手といえば[`A8`](http://px.a8.net/svt/ejp?a8mat=2HQ32D+419SDU+0K+10H0IQ)
 <img border="0" width="1" height="1" src="http://www11.a8.net/0.gif?a8mat=2HQ32D+419SDU+0K+10H0IQ" alt="">。<br>
 登録無料ですので未登録のかたは登録しておきましょう。
 
@@ -25,7 +25,7 @@ categories = ["blog"]
 ない・・。<br><br>
 
 そうなんです。<br>
-amazonの広告を設置するにはamazon公式の<a href="https://affiliate.amazon.co.jp/" target="_blank">`Amazonアソシエイト`</a>に登録が必要です。<br><br>
+amazonの広告を設置するにはamazon公式の[`Amazonアソシエイト`](https://affiliate.amazon.co.jp/)に登録が必要です。<br><br>
 
 
 電話番号登録は下記を参考にしてください。。
@@ -54,13 +54,14 @@ IPアドレスによる自己アフィ判定を行っているという噂もあ
 
 成果の受け取り方法はamazonギフト券か、銀行振込の２択。<br>
 しかし、amazonギフト券は500円から、銀行振込は5000円からと、amazonギフト券のほうが手が出しやすい。<br>
-使わないamazonギフト券は<a href="http://px.a8.net/svt/ejp?a8mat=2HQAXC+FEAKZ6+2TZ4+BWVTE" target="_blank">`Giftissue　ギフティッシュ`</a>
+使わないamazonギフト券は[`Giftissue　ギフティッシュ`](http://px.a8.net/svt/ejp?a8mat=2HQAXC+FEAKZ6+2TZ4+BWVTE)
 <img border="0" width="1" height="1" src="http://www11.a8.net/0.gif?a8mat=2HQAXC+FEAKZ6+2TZ4+BWVTE" alt="">で売却して現金化しましょう！
 
 
 ### アソシエイト利用者であることを表記
 
-<a href="https://affiliate.amazon.co.jp/gp/associates/agreement">Amazonアソシエイト・プログラム運営規約</a>
+[Amazonアソシエイト・プログラム運営規約](https://affiliate.amazon.co.jp/gp/associates/agreement)
+
 ```
 10. 乙がアソシエイトであることの表示
 

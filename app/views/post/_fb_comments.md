@@ -21,9 +21,9 @@ categories = ["blog"]
 
 ### 実装手順
 
-1. <a href="https://developers.facebook.com/">`facebook Developers`</a>に登録
+1. [`facebook Developers`](https://developers.facebook.com/)に登録
 
-2. <a href="https://developers.facebook.com/docs/plugins/comments">`Social Plugins > Comments`</a>にアクセス。
+2. [`Social Plugins > Comments`](https://developers.facebook.com/docs/plugins/comments)にアクセス。
 
 3. Get Codeからコードを取得
 
@@ -50,11 +50,11 @@ data-hrefは各自異なります。
 ```
 
 ### ページごとにコメントを分けたいかた
-<a href="http://sk-create.biz/post/fb_like/#ページごとにリンクを作りたい場合:52be3e469a9f216425e58d03ea24ad88">こちらの記事</a>を参照ください。
+[こちらの記事](http://sk-create.biz/post/search?i=5/#ページごとにリンクを作りたい場合:52be3e469a9f216425e58d03ea24ad88)を参照ください。
 
 
 ### ページ下部に設置しすぎてコメントが切れちゃうというかた
 私が実装したところ、コメントをすると都度親要素の高さを変えてくれたので大丈夫でしたが、<br>
-もしそういう目にあったかたは<a href="http://sk-create.biz/post/fb_like/#コメント欄が途切れる:52be3e469a9f216425e58d03ea24ad88">こちらの記事</a>を参照ください。<br>
+もしそういう目にあったかたは[こちらの記事](http://sk-create.biz/post/search?i=5/#コメント欄が途切れる:52be3e469a9f216425e58d03ea24ad88)を参照ください。<br>
 
 以上でござんす。

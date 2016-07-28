@@ -30,7 +30,7 @@ categories = ["linux", "aws"]
 
 ### ディスクのマウント
 
-<a href="http://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/ebs-using-volumes.html" target="_blank">AWSヘルプ</a>を参照すること
+[AWSヘルプ](http://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/ebs-using-volumes.html)を参照すること
 
 ```
     1  cd /

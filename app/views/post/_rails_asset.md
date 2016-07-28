@@ -38,7 +38,7 @@ $ vi app/views/hoge/hoge.erb
 +<%= javascript_include_tag "hoge", "huga" %>
 ```
 
-<a href='http://ruby.studio-kingdom.com/rails/guides/asset_pipeline'>プリコンパイル</a>とは、アセットの結合や縮小をしてくれるそうです。
+[プリコンパイル]( http://ruby.studio-kingdom.com/rails/guides/asset_pipeline )とは、アセットの結合や縮小をしてくれるそうです。
 
 ####### cssの処理
 

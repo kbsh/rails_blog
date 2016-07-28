@@ -31,7 +31,7 @@ categories = ["aws","nginx"]
 
 ドメインもawsで借りたものです。<br>
 ドメインをどこで借りたかわからなくなったおばかさん（私です。）は<br>
-<a href='http://reports.internic.net/cgi/whois?whois_nic=sk-create.biz&type=domain'>Whois</a>で探してください。<br>
+[Whois](http://reports.internic.net/cgi/whois?whois_nic=sk-create.biz&type=domain)で探してください。<br>
 Registrant xxxの辺りが貸主情報です。
 
 同じ環境でルートドメインでの設定が終わっている前提で書きます・・。

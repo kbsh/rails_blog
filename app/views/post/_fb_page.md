@@ -12,7 +12,7 @@ facebookページ機能の実装です。<br>
 facebookユーザーからの流入が欲しい場合は設置しましょう。
 
 
-<a href="https://www.facebook.com/pages/create/">facebookページ作成</a>にて登録します。
+[facebookページ作成](https://www.facebook.com/pages/create/)にて登録します。
 
 ```
 ブランドまたは製品
@@ -24,7 +24,7 @@ facebookユーザーからの流入が欲しい場合は設置しましょう。
 プロフィール写真設定
 ```
 
-<a href="https://developers.facebook.com/docs/plugins/page-plugin/">Page Plugin</a>
+[Page Plugin](https://developers.facebook.com/docs/plugins/page-plugin/)
 にてGet Codeしてタグを埋め込みます。
 
 
