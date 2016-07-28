@@ -42,4 +42,4 @@ $ du -h --max-depth=1 /mnt/01/
 
 ###### 容量がヤバイときの対応
 
-<a href=""
+[サーバー容量超過対策](http://sk-create.biz/post/search?i=42)

@@ -200,7 +200,7 @@ FB.Event.subscribe( 'edge.create',
 
 ボタンデザインによって`20`,`25`の定数部分が変動するかもです。<br>
 jQueryで取得しろよと仰るあなた、ごもっとも。<br>
-ちなみに<a href="https://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe/v2.3">Event.subscribe</a>のドキュメントはこちらです。<br><br>
+ちなみに[Event.subscribe](https://developers.facebook.com/docs/reference/javascript/FB.Event.subscribe/v2.3)のドキュメントはこちらです。<br><br>
 
 ***
 

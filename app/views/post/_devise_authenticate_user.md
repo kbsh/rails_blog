@@ -9,7 +9,7 @@ categories = ["rails"]
 
 
 ### はじめに
-<a href='https://github.com/plataformatec/devise'>Devise gem</a>がインストールされている前提です。
+[Devise gem](https://github.com/plataformatec/devise)がインストールされている前提です。
 
 ### 未認証時にエラーにする
 
@@ -27,7 +27,7 @@ unless以降がなかったらuserControllerへのアクセス時も引っかか
 
 
 ### エラー時のリダイレクト先を指定する
-<a href='https://github.com/plataformatec/devise/wiki/How-To:-Redirect-to-a-specific-page-when-the-user-can-not-be-authenticated'>公式wiki</a>
+[公式wiki](https://github.com/plataformatec/devise/wiki/How-To:-Redirect-to-a-specific-page-when-the-user-can-not-be-authenticated)
 railsバージョンでちがうぽい。
 
 vi lib/custom_failure.rb
@@ -42,7 +42,7 @@ end
 ```
 
 新規作成。deviseの親クラスを書き換え。<br>
-<a href='https://github.com/plataformatec/devise/wiki/How-To:-Redirect-to-a-specific-page-when-the-user-can-not-be-authenticated'>公式wiki</a>に書いてあるので多分大丈夫。
+[公式wiki](https://github.com/plataformatec/devise/wiki/How-To:-Redirect-to-a-specific-page-when-the-user-can-not-be-authenticated)に書いてあるので多分大丈夫。
 
 vi config/initializers/devise.rb
 ```

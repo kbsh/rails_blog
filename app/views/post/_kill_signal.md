@@ -20,7 +20,7 @@ categories = ["linux"]
 
 割り与える処理の書き換え登録が可能だが、特に書き換えをしていなければデフォルトの動作をする
 
-<a href="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)" target="_blanc">シグナル一覧 wikipedia</a>
+[シグナル一覧 wikipedia](https://ja.wikipedia.org/wiki/%E3%82%B7%E3%82%B0%E3%83%8A%E3%83%AB_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2))
 
 ***********************
 

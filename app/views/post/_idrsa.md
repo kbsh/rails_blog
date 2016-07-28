@@ -32,6 +32,6 @@ categories = ["linux"]
 + ssh
   + 作成した公開鍵(`id_rsa.pub`)をコピーし、交換先（接続先）の`~/.ssh/authorized_keys`に登録すればよい。
 + github
-  + 作成した秘密鍵を<a href="https://github.com/settings/keys" target="_blank">github setting</a>に登録する。
+  + 作成した秘密鍵を[github setting](https://github.com/settings/keys)に登録する。
   + サーバー側の公開鍵ファイル名を`authorized_keys`に追記すること
   + サーバー側の秘密鍵の名前を`id_rsa`から変更する場合は`~/.ssh/config`の設定が必要

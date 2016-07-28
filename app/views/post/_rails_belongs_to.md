@@ -19,8 +19,7 @@ modelにてテーブル同士を関連づけることによって、n対nの関�
 viewからのアクセスも割と自由。
 サブクエリを使う使わないに関わらず、設計時に設定しておくとよい。
 
-<a href="http://railsdoc.com/references/belongs_to">ドキュメント参照</a>
-
+[ドキュメント参照](http://railsdoc.com/references/belongs_to)
 
 
 #### 1対多の場合

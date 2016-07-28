@@ -10,7 +10,7 @@ categories = ["git"]
 github api tokenを忘れてしまった人へ。<br>
 下記コマンドで確認できます
 
-documentは<a href="https://developer.github.com/v3/oauth_authorizations" target="_blank">こちら</a>
+documentは[こちら](https://developer.github.com/v3/oauth_authorizations)
 
 
 ### 確認手順
@@ -27,7 +27,7 @@ Enter host password for user 'shoheikitabatake':
 ### 作成手順
 
 そもそも持っていない人は下記。
-もしくは<a href="https://github.com/settings/tokens" target="_blank">ここ</a>から
+もしくは[ここ](https://github.com/settings/tokens)から
 
 
 ```

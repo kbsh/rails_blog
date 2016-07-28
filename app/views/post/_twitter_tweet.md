@@ -10,7 +10,7 @@ categories = ["blog"]
 
 SNSシェア機能の第２弾。twitterです。
 
-<a href="https://about.twitter.com/ja/resources/buttons#tweet">こちら</a>にアクセスし、tweetボタンを作成します。
+[こちら]( https://about.twitter.com/ja/resources/buttons#tweet )にアクセスし、tweetボタンを作成します。
 
 FBと違い、デフォルトでURLを自動取得してくれる模様。<br>
 これはうれしい！
@@ -18,7 +18,7 @@ FBと違い、デフォルトでURLを自動取得してくれる模様。<br>
 
 ```
 <!-- HTMLタグ -->
-<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" target="_blank">Tweet</a>
 
 <!-- jsタグ -->
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

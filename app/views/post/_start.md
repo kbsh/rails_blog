@@ -13,7 +13,7 @@ categories = ["blog","ubuntu","aws","nginx"]
 
 まずは記事からHTMLを生成してくれるソフトウェアの選定からです。
 素直にシェアから考えればwordpressですがそれではつまらないですね。
-というわけで<a href='http://gohugo.io' target="_blank">HUGO</a>です。
+というわけで[HUGO](http://gohugo.io)です。
 <br>
 
 HUGOを選んだ理由は
@@ -66,7 +66,7 @@ go,brewでインストールできるようです。
 ***
 
 # 1.rubyをインストールします。
-rubyのバージョンは<a href="https://www.ruby-lang.org/ja/downloads/" target="_blank">こちら</a>で最新がいくつかを確認するとよいです。
+rubyのバージョンは[こちら](https://www.ruby-lang.org/ja/downloads/)で最新がいくつかを確認するとよいです。
 
 ```
 $ sudo add-apt-repository -y ppa:brightbox/ruby-ng
@@ -78,7 +78,7 @@ $ sudo apt-get -y install ruby2.2
 
 
 # 2.brewをインストールします。
-ubuntuなので<a href='http://brew.sh/linuxbrew/' target="_blank">Linuxbrew</a>です。brewとは別のようです。
+ubuntuなので[Linuxbrew](http://brew.sh/linuxbrew/)です。brewとは別のようです。
 
 ```
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
@@ -154,7 +154,7 @@ $ brew install hugo
 
 
 # 4. HUGOの初期設定
-HUGOのドキュメント<a href='http://gohugo.io/overview/quickstart/' target="_blank">こちら</a>です。
+HUGOのドキュメント[こちら](http://gohugo.io/overview/quickstart/)です。
 
 初期設定では下記３項目を行い、以降はルーチンで記事作成とアップロードを行います。
 1. コンテンツ（site）の作成
@@ -184,7 +184,7 @@ config.tomlには定数を設定できます。
 
 つぎにデザインを選定します。
 全パターンのテーマを落とし、あとで不要なテーマは削除しましょう。
-<a href='http://themes.gohugo.io' target="_blank">プレビューサイト</a>を開発中とのことなので、オープンしていたら先にみてしまってもよいでしょう。
+[プレビューサイト](http://themes.gohugo.io)を開発中とのことなので、オープンしていたら先にみてしまってもよいでしょう。
 
 ```
 $ cd hoge
@@ -304,7 +304,7 @@ ruby on railsを入れる際に<br>
 railsをhttpサーバで動作させるモジュールとして`passenger`を利用することにしたのですが<br>
 nginx-extrasじゃないとダメでした。
 
-くわしくは<a href='https://docs.google.com/spreadsheets/d/1zvCb0xuI1gafUFvtr_RhYS4E8bnlk2sQzwjor4MrXEs/edit#gid=0'>こちら</a>
+くわしくは[こちら](https://docs.google.com/spreadsheets/d/1zvCb0xuI1gafUFvtr_RhYS4E8bnlk2sQzwjor4MrXEs/edit#gid=0)
 </font>
 
 ```
