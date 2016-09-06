@@ -2,14 +2,17 @@
 +++
 date = "2016-08-29T19:54:51Z"
 draft = false
-title = "ubuntu, nginxでBASIC認証"
+title = "ubuntu, nginx(,rails)でBASIC認証"
 categories = ["linux", "ubuntu", "nginx"]
 +++
 %>
 
-`apache2-utils`は`htpasswd`コマンドを使用するためです。
-
-`htpasswd`のオプションは随時確認しましょう。
++ 他記事では無理とか言われてますが、railsの特定パスのみ認証も可能です
++ `apache2-utils`は`htpasswd`コマンドを使用するためです。
+  + OSにそったインストールをしてください。
++ `htpasswd`のオプションは随時確認しましょう。
++ confには`root`や`rails_env`などの設定も必要です。
+  + `/`からコピーしましょう。
 
 ```
   185  apt-get install apache2-utils

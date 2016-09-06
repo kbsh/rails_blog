@@ -2,7 +2,7 @@
 +++
 date = "2016-08-29T16:54:51Z"
 draft = false
-title = "SSL備忘録"
+title = "SSL自己証明の備忘録"
 categories = ["linux"]
 +++
 %>
