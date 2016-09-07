@@ -54,3 +54,6 @@ gem 'therubyracer'
 
 # markdown
 gem "redcarpet"
+
+gem 'redis'
+gem 'redis-rails'
