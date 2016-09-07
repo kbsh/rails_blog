@@ -19,7 +19,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">カテゴリ <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <% @recommend_tags.each do | tag | %>
-              <li><%= link_to( tag.name, post_list_by_tag_path( i: tag.id ) ) %></li>
+              <li><%= link_to( tag['name'], post_list_by_tag_path( i: tag['id'] ) ) %></li>
             <% end %>
           </ul>
         </li>

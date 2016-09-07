@@ -7,9 +7,9 @@
         <h4 class="title">カテゴリ</h4>
         <ul class="list-group">
           <% @recommend_tags.each do | tag | %>
-            <%= link_to( post_list_by_tag_path( i: tag.id ) ) do %>
+            <%= link_to( post_list_by_tag_path( i: tag['id'] ) ) do %>
               <li class="list-group-item">
-                <%= tag.name %>
+              <%= tag['name'] %>
               </li>
             <% end %>
           <% end %>
