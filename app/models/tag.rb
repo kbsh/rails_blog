@@ -20,6 +20,6 @@ class Tag < ActiveRecord::Base
       redis_set( kvs_key, recommends, kvs_ttl)
     end
 
-    JSON.parse(recommends)
+    JSON.parse( recommends )
   }
 end
