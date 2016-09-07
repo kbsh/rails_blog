@@ -23,6 +23,7 @@ awsでと言ってますが、セキュリティ部分以外はawsじゃなく�
 ```
 $ cd /etc/yum.repos.d/
 $ sudo wget http://ftp.sernet.de/pub/samba/3.5/centos/5/sernet-samba.repo
+$ sudo yum install samba
 ```
 
 ---
@@ -37,14 +38,14 @@ security = user
 encrypt passwords = yes
 
 
-[public]
+[hoge]
 comment = public space
 path = /path/to
 writable = Yes
 ```
 
-+ [svn]とpathを書き換えること。
-  + [svn]がシェア名となる。
++ [hoge]とpathを書き換えること。
+  + [hoge]がシェア名となる。
   + pathの最終ディレクトリをシェア名とすること推奨。
 
 ---
@@ -74,14 +75,16 @@ sambaのポートを通るよう設定する必要がある。
 
 ## sambaユーザーの追加
 
+新たにユーザーを作成したい場合は[useradd](http://sk-create.biz/post/search?i=44)しておく
+
 ```
 $ sudo smbpasswd -a {ユーザー名}
 New SMB password:
 Retype new SMB password:
-Added user youkai-apache.
+Added user xxxxxxx.
 ```
 
-任意のパスワードを設定する
+任意のパスワードを入力する
 
 ## sambaを起動
 
@@ -95,13 +98,21 @@ $ sudo /etc/init.d/smb start
 $ sudo service smb start
 ```
 
+## 自動起動の設定をする
+
+```
+$ chkconfig smb on
+$ chkconfig | grep smb
+smb             0:off   1:off   2:on    3:on    4:on    5:on    6:off
+```
+
 ---
 
 ## エクスプローラーから接続
 
 + Windows
   + エクスプローラーを開く
-  + アドレスバーに`\\IPアドレス`を入力
+  + アドレスバーに`\\IPアドレス\シェア名`を入力
   + ダイアログに登録したユーザーとパスワードを入力
 
 + Mac( [ドキュメント](https://support.apple.com/ja-jp/HT204445) )
