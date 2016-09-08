@@ -15,7 +15,7 @@ class Content < ActiveRecord::Base
     liked = redis_get( kvs_key )
 
     # 取得できていなければDBから取得し、セットする
-    if( liked.empty? )
+    if( liked.nil? )
       liked = select( :id, :title ).order( count: :desc ).limit( 6 ).to_json
       redis_set( kvs_key, liked, kvs_ttl)
     end
@@ -34,7 +34,7 @@ class Content < ActiveRecord::Base
     latest = redis_get( kvs_key )
 
     # 取得できていなければDBから取得し、セットする
-    if( latest.empty? )
+    if( latest.nil? )
       latest = select( :id, :title ).order( created_at: :desc ).limit( 6 ).to_json
       redis_set( kvs_key, latest, kvs_ttl)
     end

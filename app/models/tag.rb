@@ -15,7 +15,7 @@ class Tag < ActiveRecord::Base
     recommends = redis_get( kvs_key )
 
     # 取得できていなければDBから取得し、セットする
-    if( recommends.empty? )
+    if( recommends.nil? )
       recommends = where( :display => 1 ).select( :id, :name ).order( :count => :desc ).to_json
       redis_set( kvs_key, recommends, kvs_ttl)
     end
