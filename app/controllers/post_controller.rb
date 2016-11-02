@@ -10,9 +10,9 @@ class PostController < ApplicationController
   end
 
   def list_by_tag
-    tag_id = params['i'] ? params['i'].to_i : 1
+    @tag_id = params['i'] ? params['i'].to_i : 1
 
-    tag = Tag.find( tag_id )
+    tag = Tag.find( @tag_id )
 
     @count = tag.contents.count
     @contents = tag.contents
