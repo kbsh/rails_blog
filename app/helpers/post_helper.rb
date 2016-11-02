@@ -66,7 +66,7 @@ module PostHelper
     if( tag_id.nil? )
       html += "<li class='#{ page == 1 ? 'disabled' : '' }'>#{ link_to '&laquo;'.html_safe, root_path( p:1 ) }</li>"
     else
-      html += "<li class='#{ page == 1 ? 'disabled' : '' }'>#{ link_to '&laquo;'.html_safe, post_list_by_tag_path( p:1, t:tag_id ) }</li>"
+      html += "<li class='#{ page == 1 ? 'disabled' : '' }'>#{ link_to '&laquo;'.html_safe, post_list_by_tag_path( p:1, i:tag_id ) }</li>"
     end
 
     # 1 ~ 最終ページへのリンク
@@ -74,7 +74,7 @@ module PostHelper
       if( tag_id.nil? )
         html += "<li class='#{ page == i ? 'active' : '' }'>#{ link_to i, root_path( p:i ) }</li>"
       else
-        html += "<li class='#{ page == i ? 'active' : '' }'>#{ link_to i, post_list_by_tag_path( p:i, t:tag_id ) }</li>"
+        html += "<li class='#{ page == i ? 'active' : '' }'>#{ link_to i, post_list_by_tag_path( p:i, i:tag_id ) }</li>"
       end
     end
 
@@ -82,7 +82,7 @@ module PostHelper
     if( tag_id.nil? )
       html += "<li class='#{ page == i ? 'disabled' : '' }'>#{ link_to '&raquo;'.html_safe, root_path( p:1 ) }</li>"
     else
-      html += "<li class='#{ page == i ? 'disabled' : '' }'>#{ link_to '&raquo;'.html_safe, post_list_by_tag_path( p:1, t:tag_id ) }</li>"
+      html += "<li class='#{ page == i ? 'disabled' : '' }'>#{ link_to '&raquo;'.html_safe, post_list_by_tag_path( p:1, i:tag_id ) }</li>"
     end
 
     html += "</ul>"
