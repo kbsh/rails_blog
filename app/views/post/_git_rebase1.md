@@ -2,7 +2,7 @@
 +++
 date = "2015-09-24T11:50:51Z"
 draft = false
-title = "[git] historyに残したくない修正コミットを統合する"
+title = "[git rebase] historyに残したくない修正コミットを統合する"
 categories = ["git"]
 +++
 %>
@@ -16,21 +16,28 @@ categories = ["git"]
 
 ```
 # メインのコミット -aはaddを一緒にやる
-$ git comimt -am 'fix1'
+$ git commit -am 'fix1'
 
 # 誤字の修正
 $ git commit -am 'fix2'
 
-# HEAD（最新コミット）から2件分のコミットを統合する
+# HEAD（最新コミット）から2件分のコミットを操作する
 $ git rebase -i HEAD~2
 
 pick aa5b782 fix1
-pick 146a328 fix2 # ← pickをfixupに書き換えよう！
+pick 146a328 fix2 # ← pickをfixup/squash/sのいずれかに書き換えよう！
 .
 .
 .
 ```
 
 これでコミットが`fix1`にまとめられます。
-統合したいコミットのメッセージを残したい場合は`fixup`ではなく`asuash`に変えるといいらしい。
 
+コマンド | 効果
+--- | ---
+fixup | 一つ上のコミットに統合する
+squash | fixupした上で、コメントの変更を行うことができる
+
+---
+
+個人的にはsquashのほうが、コメント編集時に統合するコミット群を確認できるので安心
