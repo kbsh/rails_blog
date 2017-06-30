@@ -22,7 +22,8 @@ footer {
   .footer-category {
     float: left;
     margin-left: 32px;
-    width: 320px;
+    width: 80%;
+    max-width: 320px;
 
     .title {
       margin-bottom: 12px;
