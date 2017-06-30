@@ -22,7 +22,8 @@ footer {
   .footer-category {
     float: left;
     margin-left: 32px;
-    width: 320px;
+    width: 80%;
+    max-width: 320px;
 
     .title {
       margin-bottom: 12px;
@@ -161,4 +162,16 @@ div.list-group-item {
 
 .fb-comments, .fb-comments span, .fb-comments iframe {
   width: 100% !important;
+}
+
+@media screen and (max-width: 450px) {
+  .pc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 451px) {
+  .sp {
+    display: none;
+  }
 }

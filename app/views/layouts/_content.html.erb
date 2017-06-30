@@ -7,10 +7,8 @@
  <h4 class="title"><%= title %></h4>
   <ul class="list-group">
     <% contents.each do | content | %>
-      <%= link_to( post_search_path( i: content['id'] ) ) do %>
-        <li class="list-group-item">
-          <%= content['title'] %>
-        </li>
+      <%= link_to( post_search_path( i: content['id'] ), { :class => 'list-group-item' } ) do %>
+        <%= content['title'] %>
       <% end %>
     <% end %>
   </ul>
