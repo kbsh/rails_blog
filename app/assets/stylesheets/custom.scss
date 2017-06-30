@@ -162,3 +162,15 @@ div.list-group-item {
 .fb-comments, .fb-comments span, .fb-comments iframe {
   width: 100% !important;
 }
+
+@media screen and (max-width: 450px) {
+  .pc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 451px) {
+  .sp {
+    display: none;
+  }
+}

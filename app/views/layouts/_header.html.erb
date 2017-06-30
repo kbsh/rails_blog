@@ -9,7 +9,10 @@
       </button>
       <%= link_to( root_path, :class => "navbar-brand" ) do %>
         <div class="title-icon"></div>
-        <div class="title-text"><%= t( 'title' ) %></div>
+        <div class="title-text">
+          <p class='pc'><%= t( 'title' ) %></p>
+          <p class='sp'><%= t( 'title-short' ) %></p>
+        </div>
       <% end %>
     </div>
 
