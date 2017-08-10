@@ -20,6 +20,7 @@ slave側のmysqlに接続し、`show slave status\G`をたたく。
 
 `Slave_IO_Running`、`Slave_SQL_Running`のどちらかがNoであればレプリケーションできていない
 
+この時点で`アプリケーションからアクセスがこないようにする`こと！
 
 ---
 
@@ -28,17 +29,19 @@ slave側のmysqlに接続し、`show slave status\G`をたたく。
 
 masterより進んでいないなら`start slave`で解決
 
+※) 同期が完了するまでアプリケーションからのアクセスがこないようにしておくことを推奨
+
 ---
 
 ### 2'. 論理破壊時の復旧手順
 
 masterよりすすんでしまっており、修正不可能な場合の手順。
 
-無停止ではなく停止して安全に作業をする前提です。
+無停止ではなく停止して安全に作業をする前提。
 
 手順こちら
 
-1. メンテナンス等でアクセス不可にする。管理ツールはapache等のwebサーバーをとめておくと安心
+1. メンテナンス等でアクセス不可にする。管理ツール等サービスに直接関係ないがアクセスがくるものは、apache等のwebサーバーをとめておくと安心
 1. masterからmysqldump
 1. メンテナンス解除
 1. slaveへインポート
@@ -49,13 +52,13 @@ masterよりすすんでしまっており、修正不可能な場合の手順�
 
 #### 2'-1. masterからmysqldump
 
-サーバーのメモリが高ければgzipはいらないぽい。（空き容量と相談）
+サーバーのメモリが高ければgzipはいらなそう。（空き容量と相談）
 
 12コア128GBのヒュージョンドライブでgzipしたら、3~4コアしか使われず、CPU使用率が100%にはりついてしまった。
 
-i/oもiがほぼなかったので、全部メモリにのってたっぽい。
+i/oもiがほぼなかったので、全部メモリにのってたよう。
 
-200GBのDBで1時間しない程度の処理時間だった。
+前例として、上記スペックで200GBのDBをダンプするのに1時間しない程度の処理時間だった。
 
 ```
 mysqldump -uroot -p --opt --single-transaction --master-data=2 --all-databases | gzip > ~/db_dump.sql.gz
@@ -84,9 +87,9 @@ set-charset | SET NAMES default_character_set を出力に追加
 
 #### 2'-2. slaveにログインし、インポートします。
 
-scpで送っておきましょう。
+masterサーバで作成したzipをslaveサーバにおくる。
 
-CHANGE MASTER TOに必要な情報は出力できているのでメンテナンスをあけて大丈夫です。
+CHANGE MASTER TOに必要な情報は出力できているのでmaster（と他のslave）をサービスインしてよい。
 
 ```
 cat ~/db_dump.sql.gz | gunzip | mysql -u root -p
