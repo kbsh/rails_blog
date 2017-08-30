@@ -175,3 +175,51 @@ div.list-group-item {
     display: none;
   }
 }
+
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+h1, .h1, h2, .h2, h3, .h3, pre {
+  margin-bottom: 30.5px;
+}
+
+li {
+  margin-bottom: 10.5px;
+}
+
+table {
+  thead, tbody, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  thead:first-child>tr:first-child>th,
+  thead:first-child>tr:first-child>td {
+    border-top: 0;
+  }
+
+  thead, tbody {
+    tr {
+      th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #ddd;
+      }
+      th, td {
+        padding: 8px;
+        line-height: 1.42857143;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        vertical-align: top;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+  }
+}
