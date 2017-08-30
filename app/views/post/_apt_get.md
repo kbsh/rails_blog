@@ -9,7 +9,7 @@ categories = ["ubuntu"]
 
 
 ### apt-getコマンド一覧
-debian系で使うよね
+debian系パッケージ管理コマンド
 
 ---
 
