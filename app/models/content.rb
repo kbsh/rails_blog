@@ -3,6 +3,7 @@ class Content < ActiveRecord::Base
   has_many :tags, through: :content_tags
 
   include RedisModule
+  include ContentSearch
 
   # お勧め記事を取得
   scope :liked, -> {

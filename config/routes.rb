@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root "post#list"
 
   get 'post/list_by_tag'
+  get 'post/list_by_search'
   get 'post/search'
 
   resources :contents

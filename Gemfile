@@ -55,5 +55,10 @@ gem 'therubyracer'
 # markdown
 gem "redcarpet"
 
+# redis
 gem 'redis'
 gem 'redis-rails'
+
+# elasticsearch
+gem 'elasticsearch-model', github: 'elastic/elasticsearch-rails', branch: '2.x'
+gem 'elasticsearch-rails', github: 'elastic/elasticsearch-rails', branch: '2.x'
