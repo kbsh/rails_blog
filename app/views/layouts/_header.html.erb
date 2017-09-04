@@ -17,6 +17,17 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <% #検索バー %>
+      <form class="navbar-form navbar-left searchForm" action="/post/list_by_search" method="get">
+        <div class="searchForm_queryWrapper">
+          <input class="form-control searchForm_query" placeholder="キーワードを入力" autocomplete="off" name="q" value="<%= @keywords %>" style="width: 220px;">
+          <div class="searchForm_wiseSearchButton" style="visibility: visible;">
+            <i class="fa fa-caret-down"></i>
+          </div>
+        </div>
+      </form>
+
+      <% #カテゴリ %>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">カテゴリ <span class="caret"></span></a>
@@ -28,5 +39,6 @@
         </li>
       </ul>
     </div>
+
   </div>
 </nav>

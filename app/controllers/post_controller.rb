@@ -1,5 +1,5 @@
 class PostController < ApplicationController
-  before_action :set_page, only: [:list, :list_by_tag]
+  before_action :set_page, only: [:list, :list_by_tag, :list_by_search]
 
   def list
     @count = Content.all.count
@@ -23,6 +23,25 @@ class PostController < ApplicationController
     # 訪問数をインクリメント
     tag.count.succ
     tag.save
+
+    render "list"
+  end
+
+  def list_by_search
+    @keywords = params['q'] ? params['q'] : ''
+
+    @count = Content.search_ids(
+      @keywords,
+      0,
+      0,
+      true
+    )
+
+    @contents = Content.search_ids(
+      @keywords,
+      @step * @page - @step ,
+      @step
+    )
 
     render "list"
   end

@@ -1,5 +1,6 @@
 class ContentsController < ApplicationController
   before_action :set_content, only: [:show, :edit, :update, :destroy]
+  after_action :update_content_index, only: [:create, :edit, :update, :destroy]
 
   # GET /contents
   # GET /contents.json
@@ -66,6 +67,11 @@ class ContentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_content
       @content = Content.find(params[:id])
+    end
+
+    # elasticsearchのインデックス更新
+    def update_content_index
+      Content.import force: true
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
