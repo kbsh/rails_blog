@@ -8,8 +8,6 @@ categories = ["blog"]
 %>
 
 
-SNSシェア機能の第２弾。twitterです。
-
 [こちら]( https://about.twitter.com/ja/resources/buttons#tweet )にアクセスし、tweetボタンを作成します。
 
 FBと違い、デフォルトでURLを自動取得してくれる模様。<br>
@@ -24,6 +22,7 @@ FBと違い、デフォルトでURLを自動取得してくれる模様。<br>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 ```
 
-Tweetボタン設置はこれでおしまいです！<br>
-FBより優秀！？<br>
-おっと、誰か来たようだ。
+Tweetボタン設置はこれでおしまいです！
+
+FBに比べてかなり簡単
+

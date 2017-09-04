@@ -36,7 +36,6 @@ $hogeはなんでもいいよ。
 access_log  /var/log/nginx/access.log   debug_val_format;
 ```
 
-`/var/log/nginx/access.log` これはファイルつくっておこうね。
 
 ***
 
@@ -45,4 +44,4 @@ access_log  /var/log/nginx/access.log   debug_val_format;
 $ tail -100 -f /var/log/nginx/access.log
 ```
 
-アクセスすれば$hogeが出力されるよ
+アクセスすれば$hogeが出力される
