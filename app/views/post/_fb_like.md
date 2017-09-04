@@ -12,9 +12,7 @@ SNSシェア機能を設置しようとおもい、<br>
 
 ### デベロッパー登録
 
-まずはデベロッパー登録<br>
-http://developers.facebook.com/setup/
-
+まずは[デベロッパー登録](http://developers.facebook.com/setup/)
 
 ```
 wwwを選択

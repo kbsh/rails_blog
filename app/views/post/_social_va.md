@@ -16,6 +16,7 @@ twitterのtweet, facebookのいいねを併設したときの<br>
 以下の用に書き換えましょう。
 
 HTML
+
 ```
 <div class="social_buttons"><!-- ここ追加 -->
     <!-- いいね -->
@@ -23,10 +24,10 @@ HTML
     <!-- tweet -->
     <iframe id="twitter-widget-0".....></div>
 </div>
-
 ```
 
 CSS
+
 ```
 .social_buttons > * {
     vertical-align: bottom;
@@ -42,6 +43,4 @@ cssが分からないという方は、<br>
 `<iframe id="twitter-widget-0" style="vertical-align: bottom;">`<br>
 と直接HTMLに書きましょう。
 
-FBは本当に厄介ですね。<br>
-おっと、また誰か来たようだ。
 

@@ -52,7 +52,7 @@ awsのsaasの一つで、ドメインとホストゾーンを管理している�
 | --- | --- |
 | A | アドレス。ホストとIPアドレスを紐づける。 |
 | NS | ネームサーバ。借りているドメインと紐づく。 |
-| SOA | Start of Authority。よくわからん。素人が触れたらヤケドする。 |
+| SOA | 触らないでOK。 |
 
 今回は使わないけど他にこんなレコードがある
 
@@ -100,7 +100,7 @@ server {
     server_name  sk-create.biz;
 
     location / {
-        root   /home/ubuntu/$dir/public/;
+        root   /hoge/$dir/public/;
         index index.html;
         access_log  /var/log/nginx/$dir/access.log   main;
         error_log   /var/log/nginx/$dir/error.log;
